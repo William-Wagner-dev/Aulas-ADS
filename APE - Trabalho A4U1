@@ -1,0 +1,67 @@
+//-----------------------------------
+// Parte 1: Inicialização e Estrutura
+//-----------------------------------
+
+
+#include <stdio.h>
+
+// Protótipos das Funções (Permitem que a função main chame as funções antes de elas serem definidas)
+double calcular_salario_bruto(double valor_hora, double horas_trabalhadas);
+double calcular_desconto(double salario_bruto);
+double calcular_salario_liquido(double salario_bruto, double desconto);
+
+
+
+// ... (restante do código no próximo passo)
+
+
+//-----------------------------------
+// Parte 2: Definição dos Valores
+//-----------------------------------
+
+int main() {
+    double valor_hora, horas_trabalhadas;
+    double salario_bruto, desconto, salario_liquido;
+
+    // 1. Solicita a entrada de dados do usuário (Valor da hora e Horas trabalhadas)
+    printf("Informe o valor da hora de trabalho (R$): ");
+    scanf("%lf", &valor_hora);
+
+    printf("Informe a quantidade de horas trabalhadas no mês: ");
+    scanf("%lf", &horas_trabalhadas);
+
+    // 2. Chamada das funções para realizar os cálculos de forma modular
+    salario_bruto = calcular_salario_bruto(valor_hora, horas_trabalhadas);
+    desconto = calcular_desconto(salario_bruto);
+    salario_liquido = calcular_salario_liquido(salario_bruto, desconto);
+
+    // 3. Exibição dos resultados (Salário Bruto, Desconto e Salário Líquido)
+    printf("\n--- Demonstrativo de Pagamento ---\n");
+    printf("Salário Bruto: R$ %.2lf\n", salario_bruto);
+    printf("Desconto (9%%): R$ %.2lf\n", desconto);
+    printf("Salário Líquido: R$ %.2lf\n", salario_liquido);
+
+    return 0;
+    
+    // ... (restante do código no próximo passo)
+}
+
+//------------------------------------
+// Parte 3: Implementações das Funções
+//------------------------------------
+
+// Função para calcular Salário Bruto: Valor da hora * Horas trabalhadas
+double calcular_salario_bruto(double valor_hora, double horas_trabalhadas) {
+    return valor_hora * horas_trabalhadas;
+}
+
+// Função para calcular Desconto: 9% sobre o Salário Bruto
+double calcular_desconto(double salario_bruto) {
+    return salario_bruto * 0.09;
+}
+
+// Função para calcular Salário Líquido: Salário Bruto - Desconto
+double calcular_salario_liquido(double salario_bruto, double desconto) {
+    return salario_bruto - desconto;
+    
+}
