@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Declaração de variáveis
+    int num1, num2, num3;
+
+    printf("--- Programa de Operadores e Expressoes em C ---\n");
+    
+    // 2. Solicitar e ler os três números inteiros
+    printf("Digite o primeiro numero inteiro (num1): ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero inteiro (num2): ");
+    scanf("%d", &num2);
+
+    printf("Digite o terceiro numero inteiro (num3): ");
+    scanf("%d", &num3);
+    
+    // --------------------------------------------------------------------
+    // PARTE 1: Calculos Aritmeticos (Soma, Subtracao, Multiplicacao e Divisao)
+    // --------------------------------------------------------------------
+    printf("\n--- Resultados Aritmeticos ---\n");
+    // Realiza a soma: num1 +num2 + num3
+    int soma = num1 + num2 + num3;
+    // Realiza a subtração: num1 - num2 - num3
+    int subtracao = num1 - num2 - num3; 
+    // Realiza a multiplicação: num1 * num2 * num3
+    int multiplicacao = num1 * num2 * num3;
+    // Usa float para divisao precisa: num1 / num2 / num3
+    float divisao = (float)num1 / num2 / num3; 
+
+    printf("Soma (num1 + num2 + num3): %d\n", soma);
+    printf("Subtracao (num1 - num2 - num3): %d\n", subtracao);
+    printf("Multiplicacao (num1 * num2 * num3): %d\n", multiplicacao);
+    printf("Divisao (num1 / num2 / num3): %.2f\n", divisao); 
+    
+    // --------------------------------------------------------------------
+    // PARTE 2: Verificacoes Relacionais (Comparacoes entre pares de numeros)
+    // --------------------------------------------------------------------
+    printf("\n--- Resultados Relacionais ---\n");
+    
+    // 1. Verificar se o primeiro numero e maior que o segundo (num1 > num2)
+    int relacional1 = num1 > num2;
+    printf("1. num1 (%d) > num2 (%d)? Resultado (1=V, 0=F): %d\n", num1, num2, relacional1);
+
+    // 2. Verificar se o segundo e menor que o terceiro (num2 < num3)
+    int relacional2 = num2 < num3;
+    printf("2. num2 (%d) < num3 (%d)? Resultado (1=V, 0=F): %d\n", num2, num3, relacional2);
+
+    // --------------------------------------------------------------------
+    // PARTE 3: Verificacoes Logicas (Combinacao de condicoes usando operadores logicos)
+    // --------------------------------------------------------------------
+    printf("\n--- Resultados Logicos ---\n");
+    
+    // Condição composta solicitada: (num1 é positivo) E (num2 é par)
+    // num1 > 0 é a verificação de positivo
+    // num2 %% 2 == 0 é a verificação de par (o operador %% é usado dentro do printf para exibir %)
+    int condicao_logica = (num1 > 0) && (num2 % 2 == 0);
+
+    printf("Condicao Logica (num1 > 0 E num2 %% 2 == 0)? Resultado (1=V, 0=F): %d\n", condicao_logica);
+    
+    // Se a condicao logica for verdadeira, exibe a mensagem especifica
+    if (condicao_logica) {
+        printf("VERDADEIRO: O primeiro numero e positivo E o segundo numero e par!\n");
+    } else {
+        printf("FALSO: A condicao multipla nao foi satisfeita.\n");
+    }
+    
+    printf("\nFim do programa.\n");
+
+    return 0;
+}
+
+
+
