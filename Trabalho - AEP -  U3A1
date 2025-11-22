@@ -1,0 +1,59 @@
+    //-------------------------------------------
+    // PARTE 1: Inicialização e Estrutura
+    //-------------------------------------------
+
+
+#include <stdio.h>
+
+int main() {
+    int vendas_diarias[5];
+    int i;
+    int soma_total = 0;
+
+    printf("Insira a quantidade de vendas realizadas em 5 dias:\n");
+
+ 
+    //-------------------------------------------------
+    // PARTE 2: Leitura dos Valores (Entrada de Dados)
+    //-------------------------------------------------
+    
+for (i = 0; i < 5; i++) {
+        printf("Vendas do Dia %d: ", i + 1);
+        scanf("%d", &vendas_diarias[i]);
+    }
+    
+        // ... (restante do código no próximo passo)
+    
+    
+    
+    
+    //-------------------------------------------
+    // PARTE 3: Cálculo da Soma dos Elementos
+    //-------------------------------------------
+    
+    
+for (i = 0; i < 5; i++) {
+        soma_total += vendas_diarias[i];
+    }
+
+
+  // ... (restante do código no próximo passo)
+  
+  
+
+    //--------------------------------------------------
+    // PARTE 4: Exibição dos Resultados (Saída de Dados)
+    //--------------------------------------------------
+    
+    
+    printf("\n--- Detalhe das Vendas ---\n");
+    for (i = 0; i < 5; i++) {
+        printf("Dia %d: %d\n", i + 1, vendas_diarias[i]);
+    }
+
+    printf("\n--- Resumo ---\n");
+    printf("Soma total das vendas no período: %d\n", soma_total);
+
+    return 0;
+}
+
