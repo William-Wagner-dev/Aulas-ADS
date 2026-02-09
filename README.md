@@ -4,6 +4,6 @@
 
 **Linguagem de Progração**
 **2º Período**
---Anhanguera__
+__Anhanguera__
 
 Linguagem abordada foi a **PYTHON** com usos práticos feitos no **VS Code**
